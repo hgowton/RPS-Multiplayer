@@ -14,5 +14,52 @@ $(document).ready(function() {
     
     // Create a variable to reference the database.
     var database = firebase.database();
+
+    //userNames
+    var userOneName = "";
+    var userTwoName = "";
+    var userOneWins = 0;
+    var userTwoWins = 0;
+    var userOneLoses = 0;
+    var userTwoLoses = 0;
+    var userOneSelection = "";
+    var userTwoSelection = "";
+
+    //Store connections --> users to the firebase directory
+    var connectionsRef = database.ref("/connections");
+
+    //Updates based on client's connected or disconnected state -- allows users to leave and new users to join the game
+    var connectedRef = database.ref(".info/connected");
+
+    //When a user's connection changes
+    connectedRef.on("value", function(snap) {
+
+        //If a user connects
+        if(snap.val()) {
+            //Add user to connected list
+            var con = connectionsRef.push(true)
+
+            //Remove user from the connection list when they disconnect
+            con.onDisconnect().remove();
+        }
+    });
+
+
+    //Snapshot of changes to users
+    database.ref().on("value", function(snapshot) {
+        //If a userone or two are identified, load information
+        $("#observers").text(snapshot.numChildren());
+
+    })
+
+    //Assign UserOne Name
+    $("#userOneJoin").on("click", function () {
+        
+
+    })
+
+
     
+
+
 })

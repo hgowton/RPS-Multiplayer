@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>RPS Multiplayer</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    
+    <!-- Bootstrap code -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/f0b2e95a6d.js" crossorigin="anonymous"></script>
+    
+    <!-- Google Fonts -->
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+ 
+    <!-- JQuery and JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+    
+</header>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Rock Paper Scissors</h1>
+        <div id="instructions">instructions</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 userOneStart">
+        <form role="form">
+          <div class="form-group row">
+            <label for="name-input">Name:</label>
+            <input class="form-control" id="userOneName" type="text">
+          </div>
+          <button class="btn btn-default" id="userOneJoin" type="submit">Join Game</button>
+        </form>
+      </div>
+      <div class="col-md-4"></div>
+
+      <div class="col-md-4">
+        <div class="form-group row">
+          <label for="name-input">Name:</label>
+          <input class="form-control" id="userTwoName" type="text">
+        </div>
+        <button class="btn btn-default" id="userTwoJoin" type="submit">Join Game</button>
+      </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 gamePlay">
+        <div id="userOneName"></div>
+        <div id="userOneRock">Rock</div>
+        <div id="userOnePaper">Paper</div>
+        <div id="userOneScissors">Scissors</div>
+      </div>
+      <div class="col-md-1"></div>
+      
+
+      <div class="col-md-2 gamePlay">
+        <div id="roundResults"></div>
+        <div id="userOneSelection"></div>
+        <div id="userTwoSelection"></div>
+
+      </div>
+      <div class="col-md-1"></div>
+
+      <div class="col-md-4 gamePlay">
+        <div id="userTwoName"></div>
+        <div id="userTwoRock">Rock</div>
+        <div id="userTwoPaper">Paper</div>
+        <div id="userTwoScissors">Scissors</div>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-12" id="observers"></div>
+    </div>
+  </div>
+</body>
+
+
+</html>
