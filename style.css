@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1520034475321-cbe63696469a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+
+
+  font-family: Lato, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-container {
+  width: 530px;
+  height: 600px;
+  background: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px -5px rgba(242,195,0,0.8);
+}
+
+
+
+.header {
+  background: rgb(0,153,246);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.player-container {
+  margin: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.far, .fas{
+  font-size: 50px;
+  margin-right: 40px;
+  User-select: none;
+}
+
+#player .far:last-of-type, #computer .fas:last-of-type {
+  margin-right: 0;
+}
+
+#player .far, #player .choice {
+  color: rgb(0,153,246);
+  cursor: pointer;
+}
+
+#player .far:hover {
+  color: rgba(0,153,246,0.95);
+  text-shadow: 0 0 8px rgba(7,7,7,0.15)
+}
+
+#computer .fas, #computer .choice {
+  color: rgb(0,184,68);
+}
+
+.selected {
+  color: black !important;
+}
+
+
+
+.reset-icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 50px;
+}
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-text {
+  font-size: 40px;
+  margin: unset;
+  margin-top: 20px;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .game-container {
+    width: 95%;
+    height: 580px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .player-container {
+    margin: 50px 0 25px 25px;
+  }
+
+  .far, .fas {
+    margin-right: 20px;
+  }
+
+  .reset-icon {
+    margin-top: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .game-container {
+    height: 550px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .player-container {
+    margin: 43px 0 25px 20px;
+  }
+
+  .far, .fas {
+    font-size: 43px;
+  }
+
+  .reset-icon {
+    margin-top: 15px;
+  }
+
+  .result-container {
+    margin: 0 20px;
+  }
+}
